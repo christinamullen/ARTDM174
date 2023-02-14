@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Damion&family=Quicksand:wght@400;600&display=swap');
+:root {
+  --ff: 'Quicksand', sans-serf;
+  --fcDark: #9CAADF;
+  --background: #F1F7E7;
+  --headBackground: #D6D5F2;
+  --navBackground: #F2CED2;
+  --footBackground: #CFDEDB;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 1.125rem;
+    font-family: var(--ff);
+  }
+
+  header,
+  nav,
+  main,
+  aside,
+  footer {
+    padding: 1rem;
+  }
+  header {
+    background: var(--headBackground);
+    text-align: center;
+  }
+  /* -------------------- NAV --------------------*/
+
+
+  nav {
+    background: var(--navBackground);
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    border: 0;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    transform: scale(1, 1);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+    align-items:center;
+    
+
+  }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: flex;
+    
+  }
+  nav li {
+    margin: auto;
+    
+    
+  }
+  nav a {
+    color: var(--fcDark);
+    font: bold 1rem/1 sans-serif;
+    text-transform: uppercase;
+    opacity: 1;
+    transition: opacity 150ms ease-in-out;
+    text-decoration: none;
+    
+  }
+  nav a:hover{
+    color: #5B88B3;
+  }
+
+    /*_________input ____________*/
+  
+
+
+  /* -------------------- MAIN --------------------*/
+  main {
+    background: #F1F7E7;
+  }
+  footer {
+    background: #DFB7CA;
+    margin: 0;
+    border: 0;
+    padding: 1;
+  }
+/* ------------------------------------------- Media Queries ------------------------------------------- */
+@media screen and (min-width: 720px) {
+  nav {
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+}
+  nav li {
+      margin-left: 3em;
+      margin-bottom: 0;
+  }
+  nav ul {
+      display: flex;
+      justify-content: flex-end;
+  }
+  nav a {
+      opacity: 1;
+      position: relative;
+  }
+  nav a::before {
+      content: '';
+      display: block;
+      height: 5px;
+      background: var(--fcDark);
+      position: absolute;
+      bottom: -.55em;
+      left: 0;
+      right: 0;
+      transform: scale(0,1);
+      transition: transform ease-in-out 250ms;
+  }
+
+  nav a:hover::before{
+      transform: scale(1,1);
+
+  }
+}
