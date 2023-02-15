@@ -174,8 +174,15 @@ div div{
   background-color: var(--fcDark);
   color: white;
   border: 5px solid white;
+  
 }
-
+a.ll:link, a.ll:visited {
+  text-decoration: none;
+  color: white;
+}
+.lab1:hover, .lab2:hover, .lab3:hover, .lab4:hover, .lab5:hover, .lab6:hover, .lab7:hover, .lab8:hover, .p1:hover, .p2:hover, .p3:hover, .p4:hover {
+  background-color: var(--navBackground);
+}
 
 /* ------------------------------------------- Media Queries ------------------------------------------- */
 @media screen and (min-width: 720px) {
@@ -216,6 +223,4 @@ div div{
     grid-template-columns: repeat( 1, 1fr );
     grid-template-rows: repeat( 7, 3rem );
   }
-
-
 }
