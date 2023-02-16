@@ -5,13 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab 3:Conditions, Arrays, Events</title>
+    <style>
+    .box {
+        width: 50px;
+        height: 50px;
+        border: solid 5px;
+        transition: all 2s ease-out;
+    }
+    .move {
+        transform: translateX('300px');
+        
+        background-color: blueviolet;
+    }
+    </style>
 
 </head>
 <body>
-    <h1>
-        Lab 3
-    </h1>
+    <h1> Lab 3 </h1>
+    <button id="myButton"> Move Box </button>
+    <div class="box">box</div>
     <script>
+        //reference to button
+        const myButton = document.getElementById('myButton');
+        myButton.addEventListener('click', (e) => {
+            const box = document.querySelector('.box')
+            //use #box for id .box for class name
+            box.classList.toggle('move');
+        });
+        //creates listeners to detect click on button
+
         alert('hello!')
         //get user input
         const age = prompt('How old are you?');
@@ -21,7 +43,6 @@
         }
         else if (age == 21){
             document.body.style.backgroundColor = 'aqua';
-
         }
         else {
             alert('This page is age restricted');
