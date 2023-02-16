@@ -13,6 +13,21 @@
     </h1>
     <script>
         alert('hello!')
+        //get user input
+        const age = prompt('How old are you?');
+        //if age >= 21 then show message
+        if (age > 21){
+            alert('Welcome, you are 21 or over');
+        }
+        else if (age == 21){
+            document.body.style.backgroundColor = 'aqua';
+
+        }
+        else {
+            alert('This page is age restricted');
+            window.location = "http://dvc.edu";
+        }
+
     </script>
 
     
