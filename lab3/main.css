@@ -1,0 +1,13 @@
+.track1, .track2 {
+  height:50%;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: hsla(90, 50%, 50%, .5)
+}
+
+#horse1, #horse2 {
+    transition: all 1s;
+    transform-origin: 50% 50%;
+
+  }
+
