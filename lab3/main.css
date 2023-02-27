@@ -9,5 +9,9 @@
     transition: all 1s;
     transform-origin: 50% 50%;
 
-  }
+}
+
+.spin {
+  rotate: 360deg;
+}
 
